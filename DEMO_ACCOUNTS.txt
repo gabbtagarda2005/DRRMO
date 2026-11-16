@@ -1,0 +1,25 @@
+DRRMO Demo Login Accounts
+=========================
+
+All accounts use the same password: DRRMO123
+
+Run seed-users.bat (or: cd backend && npm run seed) to create/update these users in MongoDB.
+
++-------------+---------------------------+---------------------------+----------------------------------+
+| Role        | Email                     | Client                    | Use for                          |
++-------------+---------------------------+---------------------------+----------------------------------+
+| Admin       | admin@drmmo.gov.ph        | Web — localhost:3000      | Admin Dashboard                  |
+| DRRMO Officer | officer1@drmmo.gov.ph   | Web — localhost:3001      | Officer Command Center           |
+| Responder   | responder1@drmmo.gov.ph   | Flutter — responder_app   | Responder Field Operations       |
+| Barangay    | barangay1@drmmo.gov.ph    | Web — localhost:3003      | Barangay Coordination Dashboard  |
+| Citizen     | citizen1@email.com        | Flutter — citizen_app     | Citizen Emergency Mobile App     |
++-------------+---------------------------+---------------------------+----------------------------------+
+
+Password for every account: DRRMO123
+
+Notes:
+- MongoDB must be running before seeding.
+- Backend API must be running on http://localhost:5000 for login to work.
+- Each app only accepts users with the matching role.
+- Flutter apps: run `run-mobile.bat` or `flutter run` inside mobile\citizen_app / mobile\responder_app.
+- Android emulator uses API at http://10.0.2.2:5000 (configured in drrmo_core).

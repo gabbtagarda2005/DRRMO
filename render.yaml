@@ -1,0 +1,30 @@
+# Render Blueprint — deploys the DRRMO API.
+# Render dashboard → New → Blueprint → pick this repository.
+services:
+  - type: web
+    name: drrmo-api
+    runtime: node
+    rootDir: backend
+    plan: free
+    region: singapore
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: "20"
+      - key: MONGODB_URI
+        sync: false # paste your MongoDB Atlas connection string when prompted
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: CORS_ORIGIN
+        sync: false # e.g. https://drrmo-admin.vercel.app,https://drrmo-officer.vercel.app,https://drrmo-barangay.vercel.app,https://drrmo-*.vercel.app
+      - key: SEED_DEMO_DATA
+        value: "true" # seeds demo accounts + sample data only when the database is empty
+      - key: LOG_LEVEL
+        value: info

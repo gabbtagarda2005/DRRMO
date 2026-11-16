@@ -1,0 +1,14 @@
+name: admin_app
+description: DRRMO Admin minimal app (login UI)
+publish_to: none
+version: 0.0.1
+environment:
+  sdk: '>=3.11.0 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  drrmo_core:
+    path: ../drrmo_core
+
+flutter:
+  uses-material-design: true

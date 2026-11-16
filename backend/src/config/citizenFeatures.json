@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "appBuild": "1.0.0",
+  "updatedAt": "2026-05-23T00:00:00.000Z",
+  "features": [
+    { "id": "home_stats", "enabled": true, "label": "Home statistics cards" },
+    { "id": "quick_access", "enabled": true, "label": "Quick access section" },
+    { "id": "quick_access_hotlines", "enabled": true, "label": "Hotlines quick tile" },
+    { "id": "quick_access_advisories", "enabled": true, "label": "Advisories quick tile" },
+    { "id": "quick_access_safe_zones", "enabled": true, "label": "Safe zones quick tile" },
+    { "id": "request_tracker", "enabled": true, "label": "Request progress tracker" },
+    { "id": "sos_fab", "enabled": true, "label": "SOS floating button" },
+    { "id": "tab_home", "enabled": true, "label": "Home tab" },
+    { "id": "tab_report", "enabled": true, "label": "Report tab" },
+    { "id": "tab_requests", "enabled": true, "label": "Requests tab" },
+    { "id": "tab_alerts", "enabled": true, "label": "Alerts tab" },
+    { "id": "tab_evacuations", "enabled": true, "label": "Evacuation zones tab" },
+    { "id": "tab_hotlines", "enabled": true, "label": "Hotlines tab" },
+    { "id": "logout", "enabled": true, "label": "Logout button" },
+    { "id": "registration", "enabled": true, "label": "Account registration" }
+  ]
+}

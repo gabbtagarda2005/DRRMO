@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DRRMO — Integrated Disaster Response Platform</title>
+    <meta
+      name="description"
+      content="One coordinated platform for disaster risk reduction and emergency response — connecting citizens, barangays, responders and the municipal command center in real time."
+    />
+    <meta name="theme-color" content="#070d1a" />
+    <meta property="og:title" content="DRRMO — Integrated Disaster Response Platform" />
+    <meta property="og:description" content="Calm, coordinated response when every minute counts." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="nav" data-nav>
+      <div class="nav__inner container">
+        <a href="#top" class="brand" aria-label="DRRMO home">
+          <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M16 2.5 4.5 7v8.2c0 7.1 4.9 12.6 11.5 14.3 6.6-1.7 11.5-7.2 11.5-14.3V7L16 2.5Z" fill="none" stroke="currentColor" stroke-width="1.8" />
+            <path d="M9 17.2c1.6-1.4 3.1-1.4 4.6 0s3.1 1.4 4.7 0 3.1-1.4 4.7 0" fill="none" stroke="var(--amber)" stroke-width="1.8" stroke-linecap="round" />
+            <path d="M9 21.2c1.6-1.4 3.1-1.4 4.6 0s3.1 1.4 4.7 0 3.1-1.4 4.7 0" fill="none" stroke="currentColor" stroke-opacity=".45" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+          <span class="brand__text">DRRMO</span>
+        </a>
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#platform">Platform</a>
+          <a href="#how">How it works</a>
+          <a href="#portals">Portals</a>
+          <a href="#prepare">Prepare</a>
+          <a href="#hotlines">Hotlines</a>
+        </nav>
+        <div class="nav__actions">
+          <span class="status-pill" data-status-pill>
+            <span class="status-pill__dot"></span>
+            <span data-status-text>Connecting…</span>
+          </span>
+          <a href="#portals" class="btn btn--ghost btn--sm">Sign in</a>
+          <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <div class="nav__drawer" data-nav-drawer>
+        <a href="#platform">Platform</a>
+        <a href="#how">How it works</a>
+        <a href="#portals">Portals</a>
+        <a href="#prepare">Prepare</a>
+        <a href="#hotlines">Hotlines</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ============================================================ HERO -->
+      <section class="hero" id="top">
+        <canvas class="hero__canvas" data-contours aria-hidden="true"></canvas>
+        <div class="hero__vignette" aria-hidden="true"></div>
+        <div class="hero__pulses" aria-hidden="true">
+          <span class="pulse pulse--amber" style="--x: 68%; --y: 34%; --d: 0s"></span>
+          <span class="pulse pulse--teal" style="--x: 80%; --y: 58%; --d: 1.4s"></span>
+          <span class="pulse pulse--amber" style="--x: 57%; --y: 66%; --d: 2.6s"></span>
+          <span class="pulse pulse--teal" style="--x: 88%; --y: 26%; --d: 0.8s"></span>
+          <span class="radar" style="--x: 68%; --y: 34%"></span>
+        </div>
+
+        <div class="hero__content container">
+          <p class="eyebrow reveal">
+            <span class="eyebrow__line"></span>
+            Disaster Risk Reduction &amp; Management Office
+          </p>
+          <h1 class="hero__title reveal" style="--delay: 80ms">
+            Calm, coordinated response<br />
+            <em>when every minute counts.</em>
+          </h1>
+          <p class="hero__lede reveal" style="--delay: 160ms">
+            One living platform that connects citizens, barangays, field responders and the municipal command center — from the first report to the last family safely home.
+          </p>
+          <div class="hero__ctas reveal" style="--delay: 240ms">
+            <a class="btn btn--primary" href="#" data-portal="officer">
+              Open command center
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </a>
+            <a class="btn btn--ghost" href="#hotlines">
+              <span class="btn__sos">SOS</span>
+              Emergency hotlines
+            </a>
+          </div>
+          <p class="hero__tagline reveal" style="--delay: 320ms">Handa. Ligtas. Sama-sama. <span>— Ready. Safe. Together.</span></p>
+        </div>
+
+        <div class="live container reveal" style="--delay: 400ms" data-live>
+          <div class="live__head">
+            <span class="live__badge"><span class="live__dot"></span>Live</span>
+            <span class="live__updated" data-live-updated>Fetching municipal status…</span>
+          </div>
+          <dl class="live__grid">
+            <div class="live__item">
+              <dt>Active incidents</dt>
+              <dd data-stat="activeIncidents">—</dd>
+            </div>
+            <div class="live__item">
+              <dt>Evacuees sheltered</dt>
+              <dd><span data-stat="shelterOccupancy">—</span><small data-stat-suffix="shelterCapacity"></small></dd>
+            </div>
+            <div class="live__item">
+              <dt>Responders ready</dt>
+              <dd data-stat="respondersReady">—</dd>
+            </div>
+            <div class="live__item">
+              <dt>Open evacuation centers</dt>
+              <dd data-stat="evacuationCenters">—</dd>
+            </div>
+            <div class="live__item">
+              <dt>Resolved · 30 days</dt>
+              <dd data-stat="resolvedLast30Days">—</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ============================================================ ROLES STRIP -->
+      <section class="roles" aria-label="Who uses the platform">
+        <div class="container roles__inner">
+          <p class="roles__label">One platform, every layer of response</p>
+          <ul class="roles__list">
+            <li>Citizens</li>
+            <li>Barangay officials</li>
+            <li>Field responders</li>
+            <li>DRRMO officers</li>
+            <li>System administrators</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================================================ PLATFORM -->
+      <section class="section" id="platform">
+        <div class="container">
+          <header class="section__head reveal">
+            <p class="kicker">The platform</p>
+            <h2 class="section__title">Everything a municipality needs to <em>see, decide and act</em> — in one place.</h2>
+          </header>
+
+          <div class="bento">
+            <article class="card card--feature card--wide reveal">
+              <div class="card__visual card__visual--map" aria-hidden="true">
+                <svg viewBox="0 0 400 180" preserveAspectRatio="xMidYMid slice">
+                  <defs>
+                    <radialGradient id="glowA"><stop offset="0" stop-color="#f5a524" stop-opacity=".9" /><stop offset="1" stop-color="#f5a524" stop-opacity="0" /></radialGradient>
+                    <radialGradient id="glowT"><stop offset="0" stop-color="#3dd6c3" stop-opacity=".8" /><stop offset="1" stop-color="#3dd6c3" stop-opacity="0" /></radialGradient>
+                  </defs>
+                  <g fill="none" stroke="currentColor" stroke-opacity=".16">
+                    <path d="M-10 140 C60 110 90 150 160 120 S280 70 410 100" />
+                    <path d="M-10 120 C70 90 100 130 170 100 S290 50 410 80" />
+                    <path d="M-10 100 C80 70 110 110 180 80 S300 30 410 60" />
+                    <path d="M-10 80 C90 50 120 90 190 60 S310 10 410 40" />
+                    <path d="M-10 60 C100 30 130 70 200 40 S320 -10 410 20" />
+                  </g>
+                  <circle cx="120" cy="96" r="30" fill="url(#glowA)" /><circle cx="120" cy="96" r="4" fill="#f5a524" />
+                  <circle cx="250" cy="62" r="24" fill="url(#glowT)" /><circle cx="250" cy="62" r="3.5" fill="#3dd6c3" />
+                  <circle cx="320" cy="120" r="22" fill="url(#glowA)" /><circle cx="320" cy="120" r="3.5" fill="#f5a524" />
+                  <path d="M250 62 L120 96" stroke="#3dd6c3" stroke-dasharray="3 5" stroke-opacity=".7" />
+                </svg>
+              </div>
+              <h3>Real-time command map</h3>
+              <p>Every incident, responder and evacuation center on one live map. Updates stream in over secure WebSockets the moment they happen in the field.</p>
+            </article>
+
+            <article class="card reveal" style="--delay: 60ms">
+              <span class="card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 18h3V9H4v9Zm6.5 0h3V5h-3v13ZM17 18h3v-6h-3v6Z" fill="currentColor" /></svg>
+              </span>
+              <h3>Priority engine</h3>
+              <p>Incidents are scored automatically by hazard type, severity, people affected and time waiting, so the most urgent calls rise to the top.</p>
+            </article>
+
+            <article class="card reveal" style="--delay: 120ms">
+              <span class="card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3 3 9v12h6v-6h6v6h6V9l-9-6Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" /></svg>
+              </span>
+              <h3>Evacuation tracking</h3>
+              <p>Barangays check families in and out of shelters. Capacity and overflow risk are visible to command instantly.</p>
+            </article>
+
+            <article class="card reveal" style="--delay: 60ms">
+              <span class="card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 10v4h3l5 4V6L7 10H4Zm12.5-2.5a6 6 0 0 1 0 9M15 10a2.5 2.5 0 0 1 0 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              </span>
+              <h3>Targeted alerts</h3>
+              <p>Broadcast advisories to everyone, a single barangay, or just responders — delivered live with a full delivery count.</p>
+            </article>
+
+            <article class="card reveal" style="--delay: 120ms">
+              <span class="card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 3 8.3 7 9.5 4-1.2 7-5 7-9.5V6l-7-3Zm-3 9 2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              </span>
+              <h3>Accountable by design</h3>
+              <p>Role-based access for every user, and a tamper-evident audit trail of each sign-in, decision and status change.</p>
+            </article>
+
+            <article class="card card--wide card--split reveal" style="--delay: 60ms">
+              <div>
+                <h3>Field-ready mobile apps</h3>
+                <p>Citizens report emergencies with GPS and photos in seconds. Responders receive assignments, navigate, and update status from the scene.</p>
+              </div>
+              <div class="phones" aria-hidden="true">
+                <div class="phone">
+                  <div class="phone__bar"></div>
+                  <div class="phone__sos">SOS</div>
+                  <div class="phone__line"></div>
+                  <div class="phone__line phone__line--short"></div>
+                </div>
+                <div class="phone phone--back">
+                  <div class="phone__bar"></div>
+                  <div class="phone__row"><span class="dot dot--amber"></span><span class="phone__line"></span></div>
+                  <div class="phone__row"><span class="dot dot--teal"></span><span class="phone__line"></span></div>
+                  <div class="phone__row"><span class="dot dot--teal"></span><span class="phone__line phone__line--short"></span></div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================ HOW IT WORKS -->
+      <section class="section section--tint" id="how">
+        <div class="container">
+          <header class="section__head reveal">
+            <p class="kicker">How it works</p>
+            <h2 class="section__title">From first report to full recovery, <em>nothing falls through the cracks.</em></h2>
+          </header>
+
+          <ol class="timeline" data-timeline>
+            <li class="step reveal">
+              <span class="step__num">01</span>
+              <h3>Report</h3>
+              <p>A citizen taps SOS or a barangay official logs an incident. Location, photos and casualty counts are attached automatically.</p>
+            </li>
+            <li class="step reveal" style="--delay: 90ms">
+              <span class="step__num">02</span>
+              <h3>Verify</h3>
+              <p>The command center validates the report. The priority engine scores urgency, and barangays can escalate local emergencies.</p>
+            </li>
+            <li class="step reveal" style="--delay: 180ms">
+              <span class="step__num">03</span>
+              <h3>Dispatch</h3>
+              <p>Officers assign the nearest available responders and resources. Teams update their status live from the field.</p>
+            </li>
+            <li class="step reveal" style="--delay: 270ms">
+              <span class="step__num">04</span>
+              <h3>Recover</h3>
+              <p>Shelters are tracked, damage is assessed and relief requests are fulfilled — then every action is reported and archived.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============================================================ QUOTE -->
+      <section class="statement">
+        <div class="container">
+          <blockquote class="reveal">
+            <p>Preparedness is not a single moment. It is a promise kept every day — by a whole community, <em>working from the same picture.</em></p>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- ============================================================ PORTALS -->
+      <section class="section" id="portals">
+        <div class="container">
+          <header class="section__head section__head--split reveal">
+            <div>
+              <p class="kicker">Portals</p>
+              <h2 class="section__title">Choose your <em>workspace.</em></h2>
+            </div>
+            <p class="section__aside">Each portal is built for one role and only accepts accounts with that role. Accounts are issued by your DRRMO system administrator.</p>
+          </header>
+
+          <div class="portals">
+            <a class="portal reveal" href="#" data-portal="officer">
+              <span class="portal__tag">Command center</span>
+              <h3>DRRMO Officer</h3>
+              <p>Verify incidents, dispatch responders, manage shelters and resources, and broadcast municipality-wide alerts.</p>
+              <span class="portal__go">Open portal <span aria-hidden="true">→</span></span>
+            </a>
+            <a class="portal reveal" href="#" data-portal="barangay" style="--delay: 60ms">
+              <span class="portal__tag portal__tag--teal">Local coordination</span>
+              <h3>Barangay Official</h3>
+              <p>Report and escalate local incidents, run evacuation centers, file damage assessments and request assistance.</p>
+              <span class="portal__go">Open portal <span aria-hidden="true">→</span></span>
+            </a>
+            <a class="portal reveal" href="#" data-portal="admin" style="--delay: 120ms">
+              <span class="portal__tag portal__tag--slate">Administration</span>
+              <h3>System Admin</h3>
+              <p>Provision accounts and roles, monitor system health, review the audit trail and export compliance reports.</p>
+              <span class="portal__go">Open portal <span aria-hidden="true">→</span></span>
+            </a>
+            <div class="portal portal--app reveal" style="--delay: 60ms">
+              <span class="portal__tag">Mobile · Android</span>
+              <h3>Responder App</h3>
+              <p>Assignments, navigation and on-scene status updates for field teams.</p>
+              <span class="portal__go portal__go--muted">Available from your DRRMO</span>
+            </div>
+            <div class="portal portal--app reveal" style="--delay: 120ms">
+              <span class="portal__tag portal__tag--teal">Mobile · Android</span>
+              <h3>Citizen App</h3>
+              <p>One-tap SOS, live advisories and the nearest open evacuation centers.</p>
+              <span class="portal__go portal__go--muted">Available from your DRRMO</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================ PREPARE -->
+      <section class="section section--tint" id="prepare">
+        <div class="container">
+          <header class="section__head reveal">
+            <p class="kicker">Be prepared</p>
+            <h2 class="section__title">What every household <em>should know.</em></h2>
+          </header>
+
+          <div class="prepare reveal">
+            <div class="tabs" role="tablist" aria-label="Preparedness phases">
+              <button class="tab is-active" role="tab" aria-selected="true" aria-controls="panel-before" id="tab-before" data-tab="before">Before</button>
+              <button class="tab" role="tab" aria-selected="false" aria-controls="panel-during" id="tab-during" data-tab="during" tabindex="-1">During</button>
+              <button class="tab" role="tab" aria-selected="false" aria-controls="panel-after" id="tab-after" data-tab="after" tabindex="-1">After</button>
+            </div>
+
+            <div class="panel is-active" role="tabpanel" id="panel-before" aria-labelledby="tab-before">
+              <ul class="checklist">
+                <li><strong>Pack a go-bag</strong> for 3 days: water, ready-to-eat food, medicines, flashlight, power bank, IDs and cash in a waterproof pouch.</li>
+                <li><strong>Know your evacuation center</strong> and two safe routes to reach it from home, school and work.</li>
+                <li><strong>Agree on a family plan</strong> — a meeting point and one out-of-area contact everyone can call.</li>
+                <li><strong>Follow official channels</strong> for weather bulletins and DRRMO advisories; ignore unverified posts.</li>
+              </ul>
+            </div>
+            <div class="panel" role="tabpanel" id="panel-during" aria-labelledby="tab-during" hidden>
+              <ul class="checklist">
+                <li><strong>Evacuate early</strong> when advised. Do not wait for water to rise or winds to peak.</li>
+                <li><strong>Avoid floodwater</strong> — just 15 cm of moving water can knock an adult down.</li>
+                <li><strong>Switch off electricity and gas</strong> at the main if it is safe to do so before leaving.</li>
+                <li><strong>Report emergencies</strong> with your exact location and the number of people who need help.</li>
+              </ul>
+            </div>
+            <div class="panel" role="tabpanel" id="panel-after" aria-labelledby="tab-after" hidden>
+              <ul class="checklist">
+                <li><strong>Return only when cleared</strong> by authorities that your area is safe.</li>
+                <li><strong>Watch for hazards</strong>: downed power lines, weakened structures, gas leaks and contaminated water.</li>
+                <li><strong>Document damage</strong> with photos and report it to your barangay for assessment and relief.</li>
+                <li><strong>Check on neighbors</strong> — especially seniors, persons with disability and families with infants.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================ HOTLINES -->
+      <section class="section hotlines" id="hotlines">
+        <div class="container hotlines__inner">
+          <div class="reveal">
+            <p class="kicker kicker--amber">In an emergency</p>
+            <h2 class="section__title section__title--light">Call first. <em>Every second matters.</em></h2>
+            <p class="hotlines__lede">If life is in danger, call the national emergency hotline immediately. Stay on the line and give your exact location.</p>
+          </div>
+          <ul class="hotline-list reveal" style="--delay: 100ms" data-hotlines>
+            <li>
+              <a href="tel:911" class="hotline hotline--primary">
+                <span class="hotline__num">911</span>
+                <span class="hotline__label">National Emergency Hotline<small>Police · Fire · Medical · Rescue</small></span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:143" class="hotline">
+                <span class="hotline__num">143</span>
+                <span class="hotline__label">Philippine Red Cross<small>Emergency &amp; disaster assistance</small></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================================================ CTA -->
+      <section class="cta">
+        <div class="container cta__inner reveal">
+          <h2>Ready when it matters most.</h2>
+          <p>Sign in to your workspace, or contact your DRRMO office to get an account.</p>
+          <div class="hero__ctas">
+            <a class="btn btn--primary" href="#portals">Choose a portal</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <span class="brand__text">DRRMO</span>
+          <p data-municipality>Disaster Risk Reduction &amp; Management Office</p>
+        </div>
+        <nav class="footer__links" aria-label="Footer">
+          <a href="#platform">Platform</a>
+          <a href="#how">How it works</a>
+          <a href="#portals">Portals</a>
+          <a href="#hotlines">Hotlines</a>
+        </nav>
+        <p class="footer__note">© <span data-year></span> DRRMO Integrated Platform. Built for public service.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
